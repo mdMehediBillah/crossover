@@ -9,14 +9,13 @@ import commentRouter from "./routes/commentRoutes.js";
 import authRouter from "./routes/authRoutes.js";
 import globalErrorHandler from "./middlewares/globalErrorHandler.js";
 
-
-
 // Express app
 const app = express();
 app.use(cookieParser());
+
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://corossover-app"],
+    origin: "*",
     credentials: true,
   })
 );
@@ -24,9 +23,9 @@ app.use(express.json());
 
 dotenv.config();
 
-app.use("/api/auth", authRouter)
-app.use("/api/users", userRouter)
-app.use("/api/comments", commentRouter)
+app.use("/api/auth", authRouter);
+app.use("/api/users", userRouter);
+app.use("/api/comments", commentRouter);
 
 // Port
 const port = process.env.PORT || 4000;

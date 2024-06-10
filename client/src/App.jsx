@@ -1,23 +1,26 @@
-import Contact from "./Components/Contact";
 import { Routes, Route } from "react-router-dom";
 
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
-import Contact1 from "./Pages/Contact1";
+import Contact1 from "./Components/Contact1";
+import Header from "./Components/Header";
+import CommentList from "./Components/CommentList";
 
 function App() {
   return (
     <>
-   <Routes>
-      <Route path='/signup' element={<SignUp />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/post' element={<Contact1 />} />
-      <Route path='*' element={<NotFound />} />
-    </Routes>
-    
+      <Header />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<SignUp />} />
+
+        <Route path="/contact" element={<Contact1 />} />
+        <Route path="/comment-list" element={<CommentList />} />
+        {/* <Route path='*' element={<NotFound />} /> */}
+      </Routes>
     </>
   );
- }
+}
 
 // =======
 // import Home from "./Pages/Home";

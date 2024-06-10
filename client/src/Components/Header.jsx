@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 // import { FaShoppingCart, FaCar, FaUserCircle, FaBars } from "react-icons/fa";
 
@@ -15,22 +14,18 @@ const Header = () => {
         <nav>
           <ul className="flex">
             <li className="px-2 py-1">
-              <NavLink className={navLinkStyles} to="/">
-                Home
-              </NavLink>
-            </li>
-            <li className="px-2 py-1">
-              <NavLink className={navLinkStyles} to="/about">
-                About
-              </NavLink>
-            </li>
-            <li className="px-2 py-1">
-              <NavLink className={navLinkStyles} to="/contact">
+              <NavLink to="/contact" className={navLinkStyles}>
                 Contact
               </NavLink>
             </li>
+
             <li className="px-2 py-1">
-              <NavLink className={navLinkStyles} to="/user">
+              <NavLink to="/comment-list" className={navLinkStyles}>
+                Comments
+              </NavLink>
+            </li>
+            <li className="px-2 py-1">
+              <NavLink className={navLinkStyles} to="/register">
                 User
               </NavLink>
             </li>

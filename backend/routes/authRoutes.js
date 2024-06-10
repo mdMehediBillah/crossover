@@ -12,6 +12,6 @@ const authRouter = express.Router();
 authRouter.post("/register", createUser);
 authRouter.post("/login", loginUser);
 authRouter.get("/logout", userLogout);
-authRouter.delete("/:id",  deleteUserAccount);
+authRouter.delete("/:id", authAdmin,  deleteUserAccount);
 
 export default authRouter;
