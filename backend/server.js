@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import userRouter from "./routes/userRoutes.js";
 import commentRouter from "./routes/commentRoutes.js";
 import authRouter from "./routes/authRoutes.js";
+import globalErrorHandler from "./middlewares/globalErrorHandler.js";
 
 
 
@@ -29,6 +30,9 @@ app.use("/api/comments", commentRouter)
 
 // Port
 const port = process.env.PORT || 4000;
+
+// Global error handler
+app.use(globalErrorHandler);
 
 // Server Listner
 app.listen(port, () => {
