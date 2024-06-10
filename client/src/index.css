@@ -31,3 +31,14 @@
 body {
   background-color: var(--brandColorLightest);
 }
+
+/* Header */
+.header-container {
+  background-color: var(--bgDark);
+  color: var(--textLight);
+}
+
+.header-content-container {
+  width: 90vw;
+  margin: auto;
+}
