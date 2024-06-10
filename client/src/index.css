@@ -42,3 +42,13 @@ body {
   width: 90vw;
   margin: auto;
 }
+
+/* Conatct */
+.contact-container {
+  width: 50vw;
+  margin: auto;
+  background-color: var(--bgLight);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  max-width: 600px;
+}

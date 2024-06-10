@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../Components/Header";
 
-const User = () => {
+const About = () => {
   return (
     <>
       <Header />
-      <div>User</div>
+      <div>About</div>
     </>
   );
 };
 
-export default User;
+export default About;
